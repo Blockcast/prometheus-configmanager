@@ -11,8 +11,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/facebookincubator/prometheus-configmanager/alertmanager/config"
-	tc "github.com/facebookincubator/prometheus-configmanager/alertmanager/testcommon"
+	"github.com/blockcast/prometheus-configmanager/alertmanager/config"
+	tc "github.com/blockcast/prometheus-configmanager/alertmanager/testcommon"
 
 	amconfig "github.com/prometheus/alertmanager/config"
 	"github.com/stretchr/testify/assert"

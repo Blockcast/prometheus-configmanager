@@ -14,9 +14,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/facebookincubator/prometheus-configmanager/fsclient"
-	"github.com/facebookincubator/prometheus-configmanager/prometheus/alert"
-	"github.com/facebookincubator/prometheus-configmanager/prometheus/handlers"
+	"github.com/blockcast/prometheus-configmanager/fsclient"
+	"github.com/blockcast/prometheus-configmanager/prometheus/alert"
+	"github.com/blockcast/prometheus-configmanager/prometheus/handlers"
 
 	"github.com/golang/glog"
 	"github.com/labstack/echo"

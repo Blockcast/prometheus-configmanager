@@ -22,7 +22,7 @@ import (
 	"github.com/thoas/go-funk"
 	"gopkg.in/yaml.v3"
 
-	"github.com/facebookincubator/prometheus-configmanager/fsclient"
+	"github.com/blockcast/prometheus-configmanager/fsclient"
 
 	"github.com/prometheus/prometheus/pkg/rulefmt"
 )

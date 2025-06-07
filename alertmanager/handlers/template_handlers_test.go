@@ -15,9 +15,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/facebookincubator/prometheus-configmanager/alertmanager/client"
-	"github.com/facebookincubator/prometheus-configmanager/alertmanager/client/mocks"
-	"github.com/imdario/mergo"
+	"github.com/blockcast/prometheus-configmanager/alertmanager/client"
+	"github.com/blockcast/prometheus-configmanager/alertmanager/client/mocks"
+	"dario.cat/mergo"
 	"github.com/labstack/echo"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

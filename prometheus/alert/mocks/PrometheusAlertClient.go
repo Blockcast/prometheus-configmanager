@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	alert "github.com/facebookincubator/prometheus-configmanager/prometheus/alert"
+	alert "github.com/blockcast/prometheus-configmanager/prometheus/alert"
 	mock "github.com/stretchr/testify/mock"
 
 	rulefmt "github.com/prometheus/prometheus/pkg/rulefmt"

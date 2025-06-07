@@ -4,7 +4,7 @@
 # LICENSE file in the root directory of this source tree.
 
 # Golang image to build prom_alertconfig service
-FROM golang:1.13-alpine3.11 as go
+FROM golang:1.24.4-alpine3.21 as go
 
 RUN apk add git
 
@@ -19,12 +19,12 @@ COPY . .
 
 # Build alertmanager service
 WORKDIR alertmanager
-RUN go build -i -o /build/bin/alertmanager_configurer
+RUN go build -o /build/bin/alertmanager_configurer
 
 # Build migration CLI
-RUN go build -i -o /build/bin/migration
+RUN go build -o /build/bin/migration
 
-FROM alpine:3.11
+FROM alpine:3.21
 
 COPY --from=go /build/bin/alertmanager_configurer /bin/alertmanager_configurer
 COPY --from=go /build/bin/migration /bin/migration

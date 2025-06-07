@@ -11,8 +11,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/facebookincubator/prometheus-configmanager/fsclient/mocks"
-	"github.com/facebookincubator/prometheus-configmanager/prometheus/alert"
+	"github.com/blockcast/prometheus-configmanager/fsclient/mocks"
+	"github.com/blockcast/prometheus-configmanager/prometheus/alert"
 
 	"github.com/prometheus/common/model"
 	"github.com/prometheus/prometheus/pkg/rulefmt"

@@ -10,7 +10,7 @@ package config
 import (
 	"strings"
 
-	"github.com/facebookincubator/prometheus-configmanager/alertmanager/common"
+	"github.com/blockcast/prometheus-configmanager/alertmanager/common"
 
 	"github.com/prometheus/alertmanager/config"
 

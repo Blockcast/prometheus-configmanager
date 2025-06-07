@@ -16,8 +16,8 @@ import (
 
 	"text/template"
 
-	"github.com/facebookincubator/prometheus-configmanager/fsclient"
-	"github.com/facebookincubator/prometheus-configmanager/prometheus/alert"
+	"github.com/blockcast/prometheus-configmanager/fsclient"
+	"github.com/blockcast/prometheus-configmanager/prometheus/alert"
 	"github.com/thoas/go-funk"
 )
 

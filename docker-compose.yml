@@ -6,6 +6,7 @@ version: '3.7'
 
 services:
   prom-configurer:
+    image: blockcast/prometheus-configurer
     container_name: prom-configurer
     build:
       context: .
@@ -21,6 +22,7 @@ services:
       - 9100:9100
 
   am-configurer:
+    image: blockcast/alertmanager-configurer
     container_name: am-configurer
     build:
       context: .

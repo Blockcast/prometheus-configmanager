@@ -12,10 +12,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/facebookincubator/prometheus-configmanager/alertmanager/client"
-	"github.com/facebookincubator/prometheus-configmanager/alertmanager/handlers"
-	"github.com/facebookincubator/prometheus-configmanager/fsclient"
-	"github.com/facebookincubator/prometheus-configmanager/prometheus/alert"
+	"github.com/blockcast/prometheus-configmanager/alertmanager/client"
+	"github.com/blockcast/prometheus-configmanager/alertmanager/handlers"
+	"github.com/blockcast/prometheus-configmanager/fsclient"
+	"github.com/blockcast/prometheus-configmanager/prometheus/alert"
 
 	"github.com/golang/glog"
 	"github.com/labstack/echo"

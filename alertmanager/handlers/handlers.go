@@ -13,8 +13,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/facebookincubator/prometheus-configmanager/alertmanager/client"
-	"github.com/facebookincubator/prometheus-configmanager/alertmanager/config"
+	"github.com/blockcast/prometheus-configmanager/alertmanager/client"
+	"github.com/blockcast/prometheus-configmanager/alertmanager/config"
 	"github.com/golang/glog"
 
 	"github.com/labstack/echo"
