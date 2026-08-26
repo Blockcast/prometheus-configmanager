@@ -13,7 +13,7 @@ import (
 	"net/http"
 
 	"github.com/blockcast/prometheus-configmanager/alertmanager/client"
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 func GetGetTemplateFileHandler(amClient client.AlertmanagerClient, tmplClient client.TemplateClient) func(c echo.Context) error {

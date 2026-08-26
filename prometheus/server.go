@@ -19,8 +19,8 @@ import (
 	"github.com/blockcast/prometheus-configmanager/prometheus/handlers"
 
 	"github.com/golang/glog"
-	"github.com/labstack/echo"
-	"github.com/labstack/echo/middleware"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 const (

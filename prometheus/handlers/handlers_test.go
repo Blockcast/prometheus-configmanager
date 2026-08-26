@@ -18,7 +18,7 @@ import (
 	"github.com/blockcast/prometheus-configmanager/prometheus/alert"
 	"github.com/blockcast/prometheus-configmanager/prometheus/alert/mocks"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	"github.com/prometheus/common/model"
 	"github.com/prometheus/prometheus/pkg/rulefmt"
 	"github.com/stretchr/testify/assert"
