@@ -21,7 +21,7 @@ import (
 	"github.com/blockcast/prometheus-configmanager/alertmanager/config"
 	"github.com/blockcast/prometheus-configmanager/prometheus/alert"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	amconfig "github.com/prometheus/alertmanager/config"
 	"github.com/stretchr/testify/assert"
 )

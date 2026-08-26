@@ -15,7 +15,7 @@ import (
 
 	"github.com/blockcast/prometheus-configmanager/prometheus/alert"
 	"github.com/golang/glog"
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	"github.com/prometheus/prometheus/pkg/rulefmt"
 )
 

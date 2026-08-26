@@ -18,7 +18,7 @@ import (
 	"github.com/blockcast/prometheus-configmanager/alertmanager/client"
 	"github.com/blockcast/prometheus-configmanager/alertmanager/client/mocks"
 	"dario.cat/mergo"
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )
