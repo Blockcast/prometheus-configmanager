@@ -24,7 +24,7 @@ import (
 
 	"github.com/blockcast/prometheus-configmanager/fsclient"
 
-	"github.com/prometheus/prometheus/pkg/rulefmt"
+	"github.com/prometheus/prometheus/model/rulefmt"
 )
 
 const (
@@ -76,7 +76,9 @@ func ValidateRule(rule rulefmt.Rule) error {
 		Labels:      rule.Labels,
 		Annotations: rule.Annotations,
 	}
-	if len(node.Validate()) != 0 {
+	// UTF8Validation matches what model.IsValidMetricName / LabelName.IsValid
+	// already enforce (common's default NameValidationScheme).
+	if len(rule.Validate(node, model.UTF8Validation)) != 0 {
 		err := validateRuleImpl(node)
 		glog.Errorf("Invalid rule: %v", err)
 		return err
