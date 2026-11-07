@@ -20,7 +20,7 @@ import (
 	"github.com/prometheus/common/model"
 	"github.com/prometheus/prometheus/promql/parser"
 	"github.com/thoas/go-funk"
-	"gopkg.in/yaml.v3"
+	"go.yaml.in/yaml/v3"
 
 	"github.com/blockcast/prometheus-configmanager/fsclient"
 
@@ -78,7 +78,7 @@ func ValidateRule(rule rulefmt.Rule) error {
 	}
 	// UTF8Validation matches what model.IsValidMetricName / LabelName.IsValid
 	// already enforce (common's default NameValidationScheme).
-	if len(rule.Validate(node, model.UTF8Validation)) != 0 {
+	if len(rule.Validate(node, model.UTF8Validation, parser.NewParser(parser.Options{}))) != 0 {
 		err := validateRuleImpl(node)
 		glog.Errorf("Invalid rule: %v", err)
 		return err
@@ -105,7 +105,7 @@ func validateRuleImpl(r rulefmt.RuleNode) error {
 
 	if r.Expr.Value == "" {
 		err = fmt.Errorf("%v; field 'expr' must be set in rule", err)
-	} else if _, e := parser.ParseExpr(r.Expr.Value); e != nil {
+	} else if _, e := parser.NewParser(parser.Options{}).ParseExpr(r.Expr.Value); e != nil {
 		err = fmt.Errorf("%v; could not parse expression: %v", err, e)
 	}
 	if r.Record.Value != "" {
