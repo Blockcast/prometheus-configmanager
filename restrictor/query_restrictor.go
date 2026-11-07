@@ -64,7 +64,7 @@ func (q *QueryRestrictor) RestrictQuery(query string) (string, error) {
 		return "", fmt.Errorf("empty query string")
 	}
 
-	promQuery, err := parser.ParseExpr(query)
+	promQuery, err := parser.NewParser(parser.Options{}).ParseExpr(query)
 	if err != nil {
 		return "", fmt.Errorf("error parsing query: %v", err)
 	}
