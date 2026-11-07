@@ -14,7 +14,7 @@ import (
 	"github.com/blockcast/prometheus-configmanager/restrictor"
 
 	"github.com/prometheus/common/model"
-	"github.com/prometheus/prometheus/pkg/rulefmt"
+	"github.com/prometheus/prometheus/model/rulefmt"
 	"github.com/stretchr/testify/assert"
 )
 

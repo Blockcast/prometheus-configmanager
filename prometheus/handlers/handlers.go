@@ -16,7 +16,7 @@ import (
 	"github.com/blockcast/prometheus-configmanager/prometheus/alert"
 	"github.com/golang/glog"
 	"github.com/labstack/echo/v4"
-	"github.com/prometheus/prometheus/pkg/rulefmt"
+	"github.com/prometheus/prometheus/model/rulefmt"
 )
 
 const (
@@ -173,7 +173,7 @@ func GetDeleteAlertHandler(client alert.PrometheusAlertClient, getRuleName param
 		if err != nil {
 			return echo.NewHTTPError(http.StatusInternalServerError, err.Error())
 		}
-		return c.String(http.StatusNoContent, fmt.Sprintf("rule %s deleted", ruleName))
+		return c.NoContent(http.StatusNoContent)
 	}
 }
 
