@@ -173,7 +173,7 @@ func GetDeleteAlertHandler(client alert.PrometheusAlertClient, getRuleName param
 		if err != nil {
 			return echo.NewHTTPError(http.StatusInternalServerError, err.Error())
 		}
-		return c.String(http.StatusNoContent, fmt.Sprintf("rule %s deleted", ruleName))
+		return c.NoContent(http.StatusNoContent)
 	}
 }
 
